@@ -7,7 +7,6 @@
     <meta name="author" content="Andrew Dickman">
     <meta name="description" content="Jewler Website IT202 Unit 3">
     <title>Contact - Finite Jewelers</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/broken infinity.jpg">
 </head>
 <body>

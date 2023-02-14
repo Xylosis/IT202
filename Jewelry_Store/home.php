@@ -8,7 +8,8 @@
     <meta name="description" content="Jewler Website IT202 Unit 3">
     <title>Home - Finite Jewlers</title>
     <link rel="icon" href="images/broken infinity.jpg">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" href="testing.css">
 </head>
 <body>
     <header>
@@ -30,11 +31,23 @@
     </div>
 
     <div id="selection">
-        <p>Heres some pics of stuff we got: (put images of some stuff here)</p>
-        <img class="rings"src="images/amethystdiamond14k ring.jpg" alt="amethyst">
-        <img class="rings"src="images/sapphire diamond 14k gold ring.jpg" alt="sapphire">
-        <img class="rings"src="images/white gold ruby ring.jpg" alt="ruby">
-        <img class="rings"src="images/emeraldring.jpg" alt="emerald">
+        <p>Here are some images of our current inventory:</p>
+        <figure>
+            <img class="rings"src="images/amethystdiamond14k ring.jpg" alt="amethyst">
+            <figcaption>Fig 1. Amethyst + Diamond + 14k Gold Ring</figcaption>
+        </figure>
+        <figure>
+            <img class="rings"src="images/sapphire diamond 14k gold ring.jpg" alt="sapphire">
+            <figcaption>Fig 2. Sapphire + Diamond + 14k Gold Ring</figcaption>
+        </figure>
+        <figure>
+            <img class="rings"src="images/white gold ruby ring.jpg" alt="ruby">
+            <figcaption>Fig 3. Ruby + White Gold Ring</figcaption>
+        </figure>
+        <figure>
+            <img class="rings"src="images/emeraldring.jpg" alt="emerald">
+            <figcaption>Fig 4. Emerald Ring</figcaption>
+        </figure>
     </div>
 
     <footer>
