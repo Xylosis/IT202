@@ -63,7 +63,10 @@
     <link rel="stylesheet" href="testing.css">
 </head>
 <body>
-    <h1 id="Shippingtitle">Shipping Label</h1>
+    <head>
+        <h1 id="Shippingtitle">Shipping Label</h1>
+    </head>
+    <main>
     <div id="shiplbl">
         <label for="logo" id="lblbrandname">Finite <br> Jewlers</label>
         <img src="images/broken infinity.jpg" alt="logo" id = "labellogo"> 
@@ -86,5 +89,10 @@
         <label for="shipdate" class="labellbl">Ship Date:</label>
         <span id="shipdate" class="info"><?php echo $shipdate ?></span> <br>
     </div>
+    </main>
+    <footer>
+        <p>Contact Info:</p>
+        <p>Email: <a href="emailto:ajd93@njit.edu">ajd93@njit.edu</a></p>
+    </footer>
 </body>
 </html>

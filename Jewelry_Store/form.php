@@ -27,7 +27,9 @@
 </head>
 <body>
     <header>
-        <img src="images/broken infinity.jpg" alt="logo">
+        <figure>
+            <img src="images/broken infinity.jpg" alt="logo">
+        </figure>
         <h1>Shipping Form - Finite Jewelers</h1>
         <nav>
             <ul id = "links">
@@ -36,6 +38,7 @@
             </ul>
         </nav>
     </header>
+    <main>
     <h2>Label Form</h2>
     <?php if(!empty($error_message)) { ?> <p id="errormsg">ERROR: <?php echo htmlspecialchars($error_message); ?></p>  <?php } ?>
     <form action="label.php" method="Post">
@@ -48,7 +51,7 @@
                 <input type="text" name = "lname" id="lname" placeholder="Doe" value="<?php echo htmlspecialchars($lname);?>" required>
             </div>
             <br>
-            <div class="inputfields">
+            <div class="inputfields" class = "nowrap">
                 <label for="straddress">Street Address:</label>
                 <input type="text" name = "straddress" id="straddress" placeholder="123 Marshall Road" value="<?php echo htmlspecialchars($stradd);?>" required>
             </div>    
@@ -84,6 +87,10 @@
         <input type="Submit" class="formbuttons" value="Submit">
         <button type="reset" class="formbuttons">Reset</button>
     </form>
-    <!-- autocomplete thing exists for forms, maybe check that out? -->
+    </main>
+    <footer>
+        <p>Contact Info:</p>
+        <p>Email: <a href="emailto:ajd93@njit.edu">ajd93@njit.edu</a></p>
+    </footer>
 </body>
 </html>

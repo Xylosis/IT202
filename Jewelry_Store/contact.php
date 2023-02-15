@@ -12,13 +12,13 @@
 </head>
 <body>
     <img src="images/broken infinity.jpg" alt="logo">
+    <head>
     <h1>Contact Us Page will be functional shortly!</h1>
-    
     <nav>
         <ul id="links">
             <li><a href="home.php" id="formlinkli"> Home Page </a></li>
         </ul>
     </nav>
-    
+    </head>
 </body>
 </html>

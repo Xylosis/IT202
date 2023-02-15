@@ -1,5 +1,6 @@
 body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: medium;
     text-align: center;
     background-color: black;
     color: white;
@@ -111,6 +112,7 @@ footer p{
 .inputfields {
     display: inline-block;
     margin: .6rem 2rem;
+    white-space: nowrap;
 }
 
 .secondinputfield {
@@ -123,7 +125,7 @@ footer p{
 
 .formbuttons {
     display: inline-block;
-    margin: 1rem 1.5rem 3rem;
+    margin: 1rem 1.5rem auto;
     padding: .5rem 1.5rem;
     list-style-type: none;
     text-align: center;
@@ -186,3 +188,9 @@ footer p{
     border: solid .5rem black;
     border-radius: .5rem;
 }
+/*
+#wrapper {
+    margin-left:auto;
+    margin-right:auto;
+    width:960px;
+}*/
