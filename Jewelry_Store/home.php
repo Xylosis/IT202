@@ -13,9 +13,9 @@
 <body>
     <header>
         <h1>Finite Jewelers</h1>
-        <img src="images/broken infinity.jpg" alt="logo">
+        <img src="images/broken infinity.jpg" alt="logo"> <br>
         <nav>
-            <a href="form.php"> Shipping Form </a> <br>
+            <a href="form.php"> Shipping Form </a>
             <a href="contact.php"> Contact Us! </a> <br>
         </nav>
     </header>
@@ -53,6 +53,5 @@
     <footer>
         <p>Contact Info:</p>
     </footer>
-
 </body>
 </html>

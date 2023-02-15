@@ -1,3 +1,13 @@
+body{
+    text-align: center;
+    background-color: aqua;
+}
+
+nav{
+    display: inline;
+    margin: 20em 0;
+}
+
 .rings {
     width: 10em;
     height: 10em;
