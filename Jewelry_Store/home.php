@@ -19,36 +19,37 @@
             <a href="contact.php"> Contact Us! </a> <br>
         </nav>
     </header>
-    <div id="description">
-        <h2>Description: </h2>
-        <p>
-            Finite Jewelers is a newly formed jewelry store that was founded on Janurary 3rd, 2023. The purpose of Finite Jewelers is to 
-            be able to sell some of the best jewelry for a lower price than you'll find elsewhere. It's purpose is for people with a finite 
-            amount of money, and need to shop for jewelry on a budget. Whether it be for a as a gift for someone else or just to treat yourself,
-            Finite Jewelers has got you covered to not throw your wallet into solitary confinement as soon as you swipe your card.
-        </p>
-    </div>
+    <main>
+        <div id="description">
+            <h2>Description: </h2>
+            <p>
+                Finite Jewelers is a newly formed jewelry store that was founded on Janurary 3rd, 2023. The purpose of Finite Jewelers is to 
+                be able to sell some of the best jewelry for a lower price than you'll find elsewhere. It's purpose is for people with a finite 
+                amount of money, and need to shop for jewelry on a budget. Whether it be for a as a gift for someone else or just to treat yourself,
+                Finite Jewelers has got you covered to not throw your wallet into solitary confinement as soon as you swipe your card.
+            </p>
+        </div>
 
-    <div id="selection">
-        <p>Here are some images of our current inventory:</p>
-        <figure>
-            <img class="rings"src="images/amethystdiamond14k ring.jpg" alt="amethyst">
-            <figcaption>Fig 1. Amethyst + Diamond + 14k Gold Ring</figcaption>
-        </figure>
-        <figure>
-            <img class="rings"src="images/sapphire diamond 14k gold ring.jpg" alt="sapphire">
-            <figcaption>Fig 2. Sapphire + Diamond + 14k Gold Ring</figcaption>
-        </figure>
-        <figure>
-            <img class="rings"src="images/white gold ruby ring.jpg" alt="ruby">
-            <figcaption>Fig 3. Ruby + White Gold Ring</figcaption>
-        </figure>
-        <figure>
-            <img class="rings"src="images/emeraldring.jpg" alt="emerald">
-            <figcaption>Fig 4. Emerald Ring</figcaption>
-        </figure>
-    </div>
-
+        <div id="selection">
+            <p>Here are some images of our current inventory:</p>
+            <figure>
+                <img class="rings"src="images/amethystdiamond14k ring.jpg" alt="amethyst">
+                <figcaption>Fig 1. Amethyst + Diamond + 14k Gold Ring</figcaption>
+            </figure>
+            <figure>
+                <img class="rings"src="images/sapphire diamond 14k gold ring.jpg" alt="sapphire">
+                <figcaption>Fig 2. Sapphire + Diamond + 14k Gold Ring</figcaption>
+            </figure>
+            <figure>
+                <img class="rings"src="images/white gold ruby ring.jpg" alt="ruby">
+                <figcaption>Fig 3. Ruby + White Gold Ring</figcaption>
+            </figure>
+            <figure>
+                <img class="rings"src="images/emeraldring.jpg" alt="emerald">
+                <figcaption>Fig 4. Emerald Ring</figcaption>
+            </figure>
+        </div>
+    </main>
     <footer>
         <p>Contact Info:</p>
     </footer>

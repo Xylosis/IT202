@@ -1,7 +1,15 @@
-img{
-    width: 50px;
-    height: 50px;
-    
+.rings {
+    width: 10em;
+    height: 10em;
+    margin: 1.5em 2em 1em 2em;
+    padding: .5em 1.5em;
+    border: solid rgb(110, 101, 101);
+}
+
+.rings:hover {
+    cursor:pointer;
+    box-shadow: 0 0.5em 0.5em -0.4em #f1ff5c;
+    transform: translateY(-100.25em);
 }
 
 figure{
