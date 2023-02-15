@@ -8,7 +8,7 @@
     <meta name="description" content="Jewler Website IT202 Unit 3">
     <title>Contact - Finite Jewelers</title>
     <link rel="icon" href="images/broken infinity.jpg">
-    <link rel="stylesheet" href="testing.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <img src="images/broken infinity.jpg" alt="logo">

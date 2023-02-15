@@ -23,7 +23,7 @@
     <meta name="description" content="Jewler Website IT202 Unit 3">
     <title>Form - Finite Jewlers</title>
     <link rel="icon" href="images/broken infinity.jpg">
-    <link rel="stylesheet" href="testing.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
