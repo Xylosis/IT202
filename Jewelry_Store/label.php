@@ -13,6 +13,7 @@
     $length = filter_input(INPUT_GET, 'Length', FILTER_VALIDATE_INT);
     $val = filter_input(INPUT_GET, 'val', FILTER_VALIDATE_FLOAT);
     $shippingtype = filter_input(INPUT_GET,'Shipping');
+    $comments = filter_input(INPUT_GET, 'comments');
 
     $statesarr = array( "AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC",  
     "DE", "FL", "GA", "HI", "IA", "ID", "IL", "IN", "KS", "KY", "LA",  
@@ -75,7 +76,9 @@
         <label for="Shipping Class">Shipping Class:</label>
         <span id="Shipping Class"><?php echo $shippingtype?></span> <br>
         <span id="trackingnum">Tracking Number: 123456ABC</span> <br>
-        <img src="images/barcode.png" alt="Shipping Barcode">
+        <img src="images/barcode.png" alt="Shipping Barcode"> <br>
+        <label for="comms">Comments:</label>
+        <span id="comments"><?php echo $comments ?></span>
     </div>
 </body>
 </html>

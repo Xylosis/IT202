@@ -13,7 +13,7 @@
 <body>
     <header>
         <h1>Finite Jewelers</h1>
-        <img src="images/broken infinity.jpg" alt="logo"> <br>
+        <img src="images/broken infinity.jpg" alt="logo" id="logo"> <br>
         <nav>
             <ul id="links">
                 <li id="formlinkli"><span id="formlink"><a href="form.php"> Shipping Form </a></span></li>
@@ -33,7 +33,7 @@
         </div>
 
         <div id="selection">
-            <p>Here are some images of our current inventory:</p>
+            <p id="selectionp">Here are some images of our current inventory:</p>
             <figure>
                 <img class="rings"src="images/amethystdiamond14k ring.jpg" alt="amethyst">
                 <figcaption>Fig 1. Amethyst + Diamond + 14k Gold Ring</figcaption>
@@ -54,7 +54,7 @@
     </main>
     <footer>
         <p>Contact Info:</p>
-        <p>Email: ajd93@njit.edu</p>
+        <p>Email: <a href="emailto:ajd93@njit.edu">ajd93@njit.edu</a></p>
     </footer>
 </body>
 </html>

@@ -1,6 +1,9 @@
 body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
-    background-color: aqua;
+    background-color: black;
+    color: white;
+    margin: 2rem 1rem 0rem
 }
 
 nav{
@@ -11,7 +14,26 @@ nav{
 
 ul {
     padding: .5rem 0rem;
-    background-color: purple;
+    background-color: rgb(104, 9, 102);
+    margin: 2rem 3rem;
+    border: groove 1rem rgb(104, 9, 102);
+    border-radius: 2rem;
+}
+
+#logo {
+    width: 45rem;
+    height: 15rem;
+    border-radius: 2rem;
+}
+
+#selectionp {
+    text-align: left;
+    margin: 3rem 0 0rem 4rem;
+    font-size: larger;
+}
+
+#description {
+    margin: 0 4rem;
 }
 
 #links li{
@@ -20,9 +42,10 @@ ul {
     padding: .5rem 1.5rem;
     list-style-type: none;
     text-align: center;
-    border: solid black;
+    border: solid .1rem black;
     background-color: white;
-    border-radius: 15%;
+    border-radius: 2rem;
+    transition: transform 0.25s cubic-bezier(0,0,.62,1);
 }
 
 #links li:hover {
@@ -45,12 +68,14 @@ ul {
     border: solid rgb(110, 101, 101);
     background-color: white;
     border-radius: 20%;
+    transition: transform 0.25s cubic-bezier(0,0,.62,1);
 }
 
 .rings:hover {
     cursor:pointer;
-    box-shadow: 0 0.5rem 0.5rem -0.4rem #f1ff5c;
-    transform: translateY(-1.25rem);
+    box-shadow: 0 0.5rem 0.5rem -0.4rem rgb(82, 79, 79);
+    transform: translateY(-0.35rem);
+    transition: transform 0.25s cubic-bezier(0,0,.62,1);
 }
 
 figure{
@@ -59,12 +84,61 @@ figure{
 }
 
 footer{
-    background-color: red;
+    background-color: rgb(104, 9, 102);
     color: #f1ff5c;
     padding-bottom: 0.5rem;
+    padding-top: .5rem;
+    margin: 2rem 2rem 1rem;
+    border: solid .1rem black;
+    border-radius: 1rem;
 }
 
 footer p{
     margin: 0rem 2rem .3rem;
     text-align: left;
+}
+
+#errormsg {
+    background-color: rgb(146, 10, 10);
+    padding: 0.5rem;
+    margin: auto 4rem;
+    border: solid .5rem black;
+    border-radius: 2rem;
+}
+
+#deliveryinfo {
+    margin: 2rem 6rem;
+}
+
+.inputfields {
+    display: inline-block;
+    margin: .6rem 2rem;
+}
+
+.secondinputfield {
+    margin-left: 2rem;
+}
+
+#straddress {
+    width: 20rem;
+}
+
+.formbuttons {
+    display: inline-block;
+    margin: 1rem 1.5rem 3rem;
+    padding: .5rem 1.5rem;
+    list-style-type: none;
+    text-align: center;
+    border: solid .1rem black;
+    background-color: white;
+    border-radius: 2rem;
+    transition: transform 0.25s cubic-bezier(0,0,.62,1);
+}
+
+.formbuttons:hover {
+    background-color: #f1ff5c;
+    cursor:pointer;
+    box-shadow: 0 0.5rem 0.5rem -0.4rem #f1ff5c;
+    transform: translateY(-0.25rem);
+    transition: transform 0.25s cubic-bezier(0,0,.62,1);
 }

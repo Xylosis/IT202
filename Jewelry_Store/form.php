@@ -23,33 +23,45 @@
     <meta name="description" content="Jewler Website IT202 Unit 3">
     <title>Form - Finite Jewlers</title>
     <link rel="icon" href="images/broken infinity.jpg">
-    <!--<link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="testing.css">
 </head>
 <body>
     <header>
         <img src="images/broken infinity.jpg" alt="logo">
         <h1>Shipping Form - Finite Jewelers</h1>
         <nav>
-            <a href="home.php"> Home Page </a> <br>
-            <a href="contact.php"> Contact Us! </a> <br>
+            <ul id = "links">
+                <li id="formlinkli"> <a href="home.php"> Home Page </a> </li>
+                <li> <a href="contact.php"> Contact Us! </a> </li>
+            </ul>
         </nav>
     </header>
     <h2>Label Form</h2>
     <?php if(!empty($error_message)) { ?> <p id="errormsg">ERROR: <?php echo htmlspecialchars($error_message); ?></p>  <?php } ?>
     <form action="label.php" method="get">
-        <h3>Delivery Information:</h3>
-        <label for="fname">First Name: </label>
-        <input type="text" name = "fname" placeholder="John" value="<?php echo htmlspecialchars($fname);?>" required> <br><br>
-        <label for="lname">Last Name: </label>
-        <input type="text" name = "lname" id="lname" placeholder="Doe" value="<?php echo htmlspecialchars($lname);?>" required> <br><br>
-        <label for="straddress">Street Address:</label>
-        <input type="text" name = "straddress" id="straddress" placeholder="123 Marshall Road" value="<?php echo htmlspecialchars($stradd);?>" required> <br><br>
-        <label for="city">City:</label>
-        <input type="text" name = "city" id="city" placeholder = "Newark" value= "<?php echo htmlspecialchars($city);?>" required> <br><br>
-        <label for="state">State: </label>
-        <input type="text" name = "state" id="state" placeholder = "NJ" value="<?php echo htmlspecialchars($state);?>" required> <br><br>
-        <label for="zip">ZIP Code: </label>
-        <input style="-webkit-appearance: none; -moz-appearance: textfield; margin: 0;" type="number" name = "zip" id="zip" placeholder = "07422" value="<?php echo htmlspecialchars($zip);?>" required>
+        <div id="deliveryinfo">
+            <h3 style="margin-bottom: 1.5rem;">Delivery Information:</h3>
+            <div class="inputfields">
+                <label for="fname">First Name: </label>
+                <input type="text" name = "fname" placeholder="John" value="<?php echo htmlspecialchars($fname);?>" required>
+                <label for="lname" class="secondinputfield">Last Name: </label>
+                <input type="text" name = "lname" id="lname" placeholder="Doe" value="<?php echo htmlspecialchars($lname);?>" required>
+            </div>
+            <br>
+            <div class="inputfields">
+                <label for="straddress">Street Address:</label>
+                <input type="text" name = "straddress" id="straddress" placeholder="123 Marshall Road" value="<?php echo htmlspecialchars($stradd);?>" required>
+            </div>    
+            <br>
+            <div class="inputfields">
+                <label for="city" class="secondinputfield">City:</label>
+                <input type="text" name = "city" id="city" placeholder = "Newark" value= "<?php echo htmlspecialchars($city);?>" required>
+                <label for="state" class="secondinputfield">State: </label>
+                <input type="text" style = "width: 1.5rem;" name = "state" id="state" placeholder = "NJ" value="<?php echo htmlspecialchars($state);?>" required>
+                <label for="zip" class="secondinputfield">ZIP Code: </label>
+                <input style="-webkit-appearance: none; -moz-appearance: textfield; margin: 0; width: 3rem;" type="number" name = "zip" id="zip" placeholder = "07422" value="<?php echo htmlspecialchars($zip);?>" required>
+            </div>
+        </div>
         <h3>Other Information:</h3>
         <label for="shipdate">Enter the shipdate :</label>
         <input type="date" name="shipdate" value="<?php echo htmlspecialchars($shipdate);?>" required> <br><br>
@@ -67,10 +79,10 @@
         <input type="Radio" name="Shipping" id="Standard" Value="Economic Shipping" checked="checked">Standard Shipping <br><br>
         <h3>Comments</h3>
         <label>
-            <textarea cols="50"  rows="10" name="content" placeholder="Fragile, please be careful. etc."></textarea>
+            <textarea cols="50"  rows="10" name="content" placeholder="Fragile, please be careful. etc." value="<?php echo htmlspecialchars($comments);?>"></textarea>
         </label> <br> <br>
-        <button type="Submit" id="submt">Submit</button>
-        <button type="reset" id="rest">Reset</button>
+        <button type="Submit" class="formbuttons">Submit</button>
+        <button type="reset" class="formbuttons">Reset</button>
     </form>
     <!-- autocomplete thing exists for forms, maybe check that out? -->
 </body>
