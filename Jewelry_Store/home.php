@@ -15,8 +15,10 @@
         <h1>Finite Jewelers</h1>
         <img src="images/broken infinity.jpg" alt="logo"> <br>
         <nav>
-            <a href="form.php"> Shipping Form </a>
-            <a href="contact.php"> Contact Us! </a> <br>
+            <ul id="links">
+                <li id="formlinkli"><span id="formlink"><a href="form.php"> Shipping Form </a></span></li>
+                <li><a href="contact.php"> Contact Us! </a></li>
+            </ul>
         </nav>
     </header>
     <main>
@@ -52,6 +54,7 @@
     </main>
     <footer>
         <p>Contact Info:</p>
+        <p>Email: ajd93@njit.edu</p>
     </footer>
 </body>
 </html>
