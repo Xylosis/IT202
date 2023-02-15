@@ -21,8 +21,6 @@ ul {
 }
 
 #logo {
-    width: 45rem;
-    height: 15rem;
     border-radius: 2rem;
 }
 
@@ -85,7 +83,7 @@ figure{
 
 footer{
     background-color: rgb(104, 9, 102);
-    color: #f1ff5c;
+    color: white;
     padding-bottom: 0.5rem;
     padding-top: .5rem;
     margin: 2rem 2rem 1rem;
@@ -141,4 +139,50 @@ footer p{
     box-shadow: 0 0.5rem 0.5rem -0.4rem #f1ff5c;
     transform: translateY(-0.25rem);
     transition: transform 0.25s cubic-bezier(0,0,.62,1);
+}
+
+#Shippingtitle {
+    margin: 5rem auto 3rem;
+}
+
+#shiplbl {
+    background-color: white;
+    color: black;
+    text-align: center;
+    border: solid 1rem white;
+    border-radius: 2rem;
+    height: fit-content;
+    display: inline-block;
+    margin-bottom: 3rem;
+}
+
+.info {
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.labellbl {
+    display: inline;
+}
+
+#labellogo {
+    height: 5rem;
+    display: block;
+    margin: auto auto 1.5rem 10rem;
+    width: 50%;
+    text-align: center;
+    border: solid .1rem black;
+    border-radius: 1rem;
+}
+
+#lblbrandname {
+    display: inline;
+    float: left;
+    font-size: large;
+    margin: 1rem auto auto 2rem;
+    width: 4rem;
+    background-color: black;
+    color: white;
+    border: solid .5rem black;
+    border-radius: .5rem;
 }

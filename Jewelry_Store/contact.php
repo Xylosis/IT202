@@ -8,13 +8,16 @@
     <meta name="description" content="Jewler Website IT202 Unit 3">
     <title>Contact - Finite Jewelers</title>
     <link rel="icon" href="images/broken infinity.jpg">
+    <link rel="stylesheet" href="testing.css">
 </head>
 <body>
     <img src="images/broken infinity.jpg" alt="logo">
     <h1>Contact Us Page will be functional shortly!</h1>
     
     <nav>
-        <a href="home.php"> Home Page </a>
+        <ul id="links">
+            <li><a href="home.php" id="formlinkli"> Home Page </a></li>
+        </ul>
     </nav>
     
 </body>

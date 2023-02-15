@@ -38,7 +38,7 @@
     </header>
     <h2>Label Form</h2>
     <?php if(!empty($error_message)) { ?> <p id="errormsg">ERROR: <?php echo htmlspecialchars($error_message); ?></p>  <?php } ?>
-    <form action="label.php" method="get">
+    <form action="label.php" method="Post">
         <div id="deliveryinfo">
             <h3 style="margin-bottom: 1.5rem;">Delivery Information:</h3>
             <div class="inputfields">
@@ -79,9 +79,9 @@
         <input type="Radio" name="Shipping" id="Standard" Value="Economic Shipping" checked="checked">Standard Shipping <br><br>
         <h3>Comments</h3>
         <label>
-            <textarea cols="50"  rows="10" name="content" placeholder="Fragile, please be careful. etc." value="<?php echo htmlspecialchars($comments);?>"></textarea>
+            <textarea cols="50"  rows="10" name="comments" placeholder="Fragile, please be careful. etc." value="<?php echo htmlspecialchars($comments);?>"></textarea>
         </label> <br> <br>
-        <button type="Submit" class="formbuttons">Submit</button>
+        <input type="Submit" class="formbuttons" value="Submit">
         <button type="reset" class="formbuttons">Reset</button>
     </form>
     <!-- autocomplete thing exists for forms, maybe check that out? -->
