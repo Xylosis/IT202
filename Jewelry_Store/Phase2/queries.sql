@@ -94,9 +94,63 @@ INSERT INTO jewelry
 VALUES
 ((SELECT jewelryCategoryID FROM jewelryCategories WHERE jewelryCategoryName = 'Necklaces'), (SELECT floor(rand()*9000) + 1000), "Multistone Necklace", '22" Multistone Purple Necklace with alternating Pearls, Carnelian, and Hematite stones', (SELECT floor(rand()*900)+100), NOW());
 
+INSERT INTO jewelry
+(jewelryCategoryID, jewelryCode, jewelryName, description, price, dateAdded)
+VALUES
+((SELECT jewelryCategoryID FROM jewelryCategories WHERE jewelryCategoryName = 'Necklaces'), (SELECT floor(rand()*9000) + 1000), "Finite Necklace", '19" 14k Gold Finite Engraved with Embedded Diamonds', (SELECT floor(rand()*900)+100.99), NOW());
 
 INSERT INTO jewelry
 (jewelryCategoryID, jewelryCode, jewelryName, description, price, dateAdded)
 VALUES
-((SELECT jewelryCategoryID FROM jewelryCategories WHERE jewelryCategoryName = 'Necklaces'), (SELECT floor(rand()*9000) + 1000), " Necklace", '', (SELECT floor(rand()*900)+100.99), NOW());
+((SELECT jewelryCategoryID FROM jewelryCategories WHERE jewelryCategoryName = 'Necklaces'), (SELECT floor(rand()*9000) + 1000), "Ruby Sapphire Necklace", '16" Ruby Sapphire alternate pattern Necklace', (SELECT floor(rand()*900)+100.99), NOW());
 
+--Earrings--
+
+INSERT INTO jewelry
+(jewelryCategoryID, jewelryCode, jewelryName, description, price, dateAdded)
+VALUES
+((SELECT jewelryCategoryID FROM jewelryCategories WHERE jewelryCategoryName = 'Earrings'), (SELECT floor(rand()*9000) + 1000), "Black Diamond Studs", "6mm Black Diamond Stud Earrign with 14k White Gold", (SELECT floor(rand()*900)+100), NOW());
+
+INSERT INTO jewelry
+(jewelryCategoryID, jewelryCode, jewelryName, description, price, dateAdded)
+VALUES
+((SELECT jewelryCategoryID FROM jewelryCategories WHERE jewelryCategoryName = 'Earrings'), (SELECT floor(rand()*9000) + 1000), "Rose Gold Hoops", '20mm Rose Gold Dangling Hoops', (SELECT floor(rand()*900)+100.99), NOW());
+
+INSERT INTO jewelry
+(jewelryCategoryID, jewelryCode, jewelryName, description, price, dateAdded)
+VALUES
+((SELECT jewelryCategoryID FROM jewelryCategories WHERE jewelryCategoryName = 'Earrings'), (SELECT floor(rand()*9000) + 1000), "Ruby Black Diamond Studs", '5mm Ruby and Black Diamond Studs with 24k White Gold', (SELECT floor(rand()*9000)+1000.99), NOW());
+
+--Braclets--
+
+INSERT INTO jewelry
+(jewelryCategoryID, jewelryCode, jewelryName, description, price, dateAdded)
+VALUES
+((SELECT jewelryCategoryID FROM jewelryCategories WHERE jewelryCategoryName = 'Braclet'), (SELECT floor(rand()*9000) + 1000), "Multistone Necklace", '22" Multistone Purple Necklace with alternating Pearls, Carnelian, and Hematite stones', (SELECT floor(rand()*900)+100), NOW());
+
+INSERT INTO jewelry
+(jewelryCategoryID, jewelryCode, jewelryName, description, price, dateAdded)
+VALUES
+((SELECT jewelryCategoryID FROM jewelryCategories WHERE jewelryCategoryName = 'Braclet'), (SELECT floor(rand()*9000) + 1000), "Finite Necklace", '19" 14k Gold Finite Engraved with Embedded Diamonds', (SELECT floor(rand()*900)+100.99), NOW());
+
+INSERT INTO jewelry
+(jewelryCategoryID, jewelryCode, jewelryName, description, price, dateAdded)
+VALUES
+((SELECT jewelryCategoryID FROM jewelryCategories WHERE jewelryCategoryName = 'Braclet'), (SELECT floor(rand()*9000) + 1000), "Ruby Sapphire Necklace", '16" Ruby Sapphire alternate pattern Necklace', (SELECT floor(rand()*900)+100.99), NOW());
+
+--Anklets--
+
+INSERT INTO jewelry
+(jewelryCategoryID, jewelryCode, jewelryName, description, price, dateAdded)
+VALUES
+((SELECT jewelryCategoryID FROM jewelryCategories WHERE jewelryCategoryName = 'Anklet'), (SELECT floor(rand()*9000) + 1000), "Multistone Necklace", '22" Multistone Purple Necklace with alternating Pearls, Carnelian, and Hematite stones', (SELECT floor(rand()*900)+100), NOW());
+
+INSERT INTO jewelry
+(jewelryCategoryID, jewelryCode, jewelryName, description, price, dateAdded)
+VALUES
+((SELECT jewelryCategoryID FROM jewelryCategories WHERE jewelryCategoryName = 'Anklet'), (SELECT floor(rand()*9000) + 1000), "Finite Necklace", '19" 14k Gold Finite Engraved with Embedded Diamonds', (SELECT floor(rand()*900)+100.99), NOW());
+
+INSERT INTO jewelry
+(jewelryCategoryID, jewelryCode, jewelryName, description, price, dateAdded)
+VALUES
+((SELECT jewelryCategoryID FROM jewelryCategories WHERE jewelryCategoryName = 'Anklet'), (SELECT floor(rand()*9000) + 1000), "Ruby Sapphire Necklace", '16" Ruby Sapphire alternate pattern Necklace', (SELECT floor(rand()*900)+100.99), NOW());
