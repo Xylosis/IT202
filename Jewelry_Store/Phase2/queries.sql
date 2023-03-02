@@ -1,3 +1,5 @@
+--THIS FILE IS TO KEEP TRACK OF EVERY SQL QUERY COMMITTED TO THE DATABASE--
+
 -- create and select the database
 DROP DATABASE IF EXISTS jewelry_store;
 CREATE DATABASE jewelry_store;
