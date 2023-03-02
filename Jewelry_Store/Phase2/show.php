@@ -40,6 +40,10 @@ $statement3->closeCursor();
 <head>
     <meta name="author" content="Andrew Dickman">
     <meta name="description" content="Jeweler Website IT202 Phase 2">
+    <meta name="date" content="3/1/2023">
+    <meta name="coursename & section" content="IT202 - 004">
+    <meta name="Assignment name" content="Jewelry store phase 2">
+    <meta name="email" content="ajd93@njit.edu">
     <title>Inventory - Finite Jewelers</title>
     <link rel="stylesheet" href="../styles.css" />
     <link rel="stylesheet" href="show.css" />
