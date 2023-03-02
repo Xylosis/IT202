@@ -154,3 +154,7 @@ INSERT INTO jewelry
 (jewelryCategoryID, jewelryCode, jewelryName, description, price, dateAdded)
 VALUES
 ((SELECT jewelryCategoryID FROM jewelryCategories WHERE jewelryCategoryName = 'Anklet'), (SELECT floor(rand()*9000) + 1000), "Finite Sterling Silver Anklet", 'Sterling Silver Anklet with Finite Symbol', (SELECT floor(rand()*100)+129.99), NOW());
+
+--Fixing my dumb spelling mistake on bracelet--
+
+UPDATE jewelryCategories SET jewelryCategoryName = 'Bracelet' WHERE jewelryCategoryID = 4
