@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Will only load if there is an error connecting to the database -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">

@@ -17,6 +17,7 @@
         <nav>
             <ul id="links">
                 <li id="formlinkli"><span id="formlink"><a href="form.php"> Shipping Form </a></span></li>
+                <li> <a href="Phase2/show.php"> Inventory </a> </li>
                 <li><a href="contact.php"> Contact Us! </a></li>
             </ul>
         </nav>

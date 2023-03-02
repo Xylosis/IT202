@@ -34,6 +34,7 @@
         <nav>
             <ul id = "links">
                 <li id="formlinkli"> <a href="home.php"> Home Page </a> </li>
+                <li> <a href="Phase2/show.php"> Inventory </a> </li>
                 <li> <a href="contact.php"> Contact Us! </a> </li>
             </ul>
         </nav>

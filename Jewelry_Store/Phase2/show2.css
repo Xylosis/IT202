@@ -9,15 +9,15 @@
 #displayInfo {
     text-align: center;
     display: inline-block;
-    margin:1rem 0;
-    background-color: rgb(28, 3, 28);
+    margin-top:1em;
+    background-color: rgb(35, 3, 34);
     border: rgb(104, 9, 102) solid;
     border-radius:1rem;
     padding-top:1rem;
 }
 
 .jDisplay {
-    padding: 0 1.5rem 1rem;
+    padding: 0 1.5em 1em;
 }
 
 li{

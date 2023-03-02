@@ -1,3 +1,4 @@
+<!-- Connecting to database -->
 <?php
     $dsn='mysql:host=localhost:3307;dbname=jewelry_store';
     $username='web_user';

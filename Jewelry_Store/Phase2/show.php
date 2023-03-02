@@ -38,51 +38,67 @@ $statement3->closeCursor();
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Stock - Finite Jewelers</title>
+    <meta name="author" content="Andrew Dickman">
+    <meta name="description" content="Jeweler Website IT202 Phase 2">
+    <title>Inventory - Finite Jewelers</title>
     <link rel="stylesheet" href="../styles.css" />
-    <link rel="stylesheet" href="show.css">
+    <link rel="stylesheet" href="show.css" />
+    <link rel="icon" href="../images/broken infinity.jpg">
 </head>
 <body>
+<header>
+        <figure>
+            <img src="../images/broken infinity.jpg" alt="logo">
+        </figure>
+        <h1>Inventory - Finite Jewelers</h1>
+        <nav> <!-- Nav bar to other pages -->
+            <ul id = "links">
+                <li id="formlinkli"> <a href="../home.php"> Home Page </a> </li>
+                <li> <a href="../form.php"> Shipping Form </a> </li>
+                <li> <a href="../contact.php"> Contact Us! </a> </li>
+            </ul>
+        </nav>
+    </header>
 <main>
     <h1>Product List</h1>
     <aside>
         <h2>Categories</h2>
-        <nav>
-        <ul>
-            <?php foreach ($categories as $category) : ?>
-            <li>
-                <a href="?category_id=<?php 
-                        echo $category['jewelryCategoryID']; ?>">
+        <ul id="jChoiceUL">
+            <?php foreach ($categories as $category) : ?> <!-- Looping through database to display options -->
+            <li id="jFilter">
+                <a id= "jLinks" href="?category_id=<?php echo $category['jewelryCategoryID']; ?>">
                     <?php echo $category['jewelryCategoryName']; ?></a>
             </li>
             <?php endforeach; ?>
-        </ul>
-        </nav>           
+        </ul>     
     </aside>
     <section>
         <h2><?php echo $category_name; ?></h2>
-        <table>
-            <tr>
-                <th>Code</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Price</th>
-                <th class="right">Time/Date Added</th>
+        <table id="displayInfo">
+            <tr class="categoryInfoHead">
+                <th class = "jDisplay" >Code</th>
+                <th class = "jDisplay" >Name</th>
+                <th class = "jDisplay" >Description</th>
+                <th class = "jDisplay" >Price</th>
+                <th class = "jDisplay"  class="right">Date/Time Added</th>
             </tr>
  
-            <?php foreach ($products as $product) : ?>
-            <tr>
-                <td><?php echo $product['jewelryCode']; ?></td>
-                <td><?php echo $product['jewelryName']; ?></td>
-                <td><?php echo $product['description']; ?></td>
-                <td><?php echo $product['price']; ?></td>
-                <td class="right"><?php echo $product['dateAdded']; ?>
+            <?php foreach ($products as $product) : ?> <!-- Looping through database to show item information -->
+            <tr class="categoryInfo">
+                <td class = "jDisplay" id="jCode"><?php echo $product['jewelryCode']; ?></td>
+                <td class = "jDisplay" id="jName"><?php echo $product['jewelryName']; ?></td>
+                <td class = "jDisplay" id="jDescription"><?php echo $product['description']; ?></td>
+                <td class = "jDisplay" id="jPrice"><?php echo $product['price']; ?></td>
+                <td class = "jDisplay" id="jDate" class="right"><?php echo $product['dateAdded']; ?>
                 </td>
             </tr>
             <?php endforeach; ?>
         </table>
     </section>
 </main>    
-<footer></footer>
+    <footer>        
+        <p>Contact Info:</p>
+        <p>Email: <a href="emailto:ajd93@njit.edu">ajd93@njit.edu</a></p>
+    </footer>
 </body>
 </html>
