@@ -1,14 +1,14 @@
 <?php
 require('database.php');
 
-// Get category ID
+// Get category ID on page reset
 $category_id = filter_input(INPUT_GET, 'category_id', FILTER_VALIDATE_INT);
 
 if ($category_id == NULL || $category_id == FALSE) {
     $category_id = 1;
 }
  
-// Get name for selected category
+// set up queries and get the names for each variable to refer to the database
 $queryCategory = 'SELECT * FROM jewelryCategories
                   WHERE jewelryCategoryID = :category_id';
 $statement1 = $db->prepare($queryCategory);
@@ -24,7 +24,7 @@ $statement2->execute();
 $categories = $statement2->fetchAll();
 $statement2->closeCursor();
  
-// Get products for selected category
+// set up queries and collect products within selected category
 $queryProducts = 'SELECT * FROM jewelry
                   WHERE jewelryCategoryID = :category_id
                   ORDER BY jewelryID';

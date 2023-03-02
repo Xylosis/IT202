@@ -39,7 +39,7 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main> <!-- A LOT of printing -->
     <h2>Label Form</h2>
     <?php if(!empty($error_message)) { ?> <p id="errormsg">ERROR: <?php echo htmlspecialchars($error_message); ?></p>  <?php } ?>
     <form action="label.php" method="Post">

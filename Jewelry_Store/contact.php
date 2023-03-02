@@ -12,7 +12,7 @@
 </head>
 <body>
     <img src="images/broken infinity.jpg" alt="logo">
-    <head>
+    <head> <!-- NOT FUNCTIONAL YET.. IGNORE -->
     <h1>Contact Us Page will be functional shortly!</h1>
     <nav>
         <ul id="links">

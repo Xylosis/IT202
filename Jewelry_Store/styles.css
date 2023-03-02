@@ -63,7 +63,7 @@ ul {
 .formlinkli {
     margin: 10rem 10rem;
 }
-
+/*ring figures*/
 .rings {
     width: 10rem;
     height: 10rem;
@@ -101,7 +101,7 @@ footer p{
     margin: 0rem 2rem .3rem;
     text-align: left;
 }
-
+/* php error message */
 #errormsg {
     background-color: rgb(146, 10, 10);
     padding: 0.5rem;
@@ -147,7 +147,7 @@ footer p{
     transform: translateY(-0.25rem);
     transition: transform 0.25s cubic-bezier(0,0,.62,1);
 }
-
+/* For shipping label below */
 #Shippingtitle {
     margin: 5rem auto 3rem;
 }
@@ -193,9 +193,3 @@ footer p{
     border: solid .5rem black;
     border-radius: .5rem;
 }
-/*
-#wrapper {
-    margin-left:auto;
-    margin-right:auto;
-    width:960px;
-}*/

@@ -66,7 +66,7 @@
     <head>
         <h1 id="Shippingtitle">Shipping Label</h1>
     </head>
-    <main>
+    <main> <!-- Printing, a lot of it -->
     <div id="shiplbl">
         <label for="logo" id="lblbrandname">Finite <br> Jewlers</label>
         <img src="images/broken infinity.jpg" alt="logo" id = "labellogo"> 

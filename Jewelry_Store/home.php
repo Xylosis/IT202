@@ -14,11 +14,11 @@
     <header>
         <h1>Finite Jewelers</h1>
         <img src="images/broken infinity.jpg" alt="logo" id="logo"> <br>
-        <nav>
+        <nav> <!-- Nav bar to other pages -->
             <ul id="links">
-                <li id="formlinkli"><span id="formlink"><a href="form.php"> Shipping Form </a></span></li>
-                <li> <a href="Phase2/show.php"> Inventory </a> </li>
-                <li><a href="contact.php"> Contact Us! </a></li>
+                <li id="formlinkli"><span id="formlink"><a class="navLinks" href="form.php"> Shipping Form </a></span></li>
+                <li> <a class="navLinks" href="Phase2/show.php"> Inventory </a> </li>
+                <li><a class="navLinks" href="contact.php"> Contact Us! </a></li>
             </ul>
         </nav>
     </header>
@@ -32,7 +32,7 @@
                 Finite Jewelers has got you covered to not throw your wallet into solitary confinement as soon as you swipe your card.
             </p>
         </div>
-
+        <!-- Images of figures -->
         <div id="selection">
             <p id="selectionp">Here are some images of our current inventory:</p>
             <figure>
