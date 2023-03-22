@@ -99,6 +99,9 @@ $statement3->closeCursor();
             <?php endforeach; ?>
         </table>
     </section>
+    <br>
+    <h2 style="margin-bottom:.4em;">Have something to sell?</h2>
+    <a href="../Phase3/create.php" class="formbuttons">Click here to add your Jewelery to our Inventory.</a>
 </main>    
     <footer>        
         <p>Contact Info:</p>
