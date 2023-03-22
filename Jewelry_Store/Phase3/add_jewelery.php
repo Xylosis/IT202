@@ -17,7 +17,8 @@ if(!isset($error) ) { $error = ''; }
 if($category_id == NULL || $category_id == FALSE || $code == NULL || $name == NULL || $price == NULL || $price == FALSE) {
     $error = 'Invalid product data, check all fields and try again.';
 }
-
+//no further validation needed for code and price, both must be entered numbers within a range from HTML input="number" and min and max 
+//attributes.
 if($descr == NULL){
     $error = 'Description left empty, please enter a description and try again.';
 }
