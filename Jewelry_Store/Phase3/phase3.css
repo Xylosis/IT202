@@ -3,8 +3,8 @@ Date: 3/22/23
 IT202 - 004
 Phase 3 - Create Page
 */
-
-#addForm{
+/*All coloring and positioning and stuff, all the fun stuff is inherited.*/
+#addForm{ /* background for form */
     text-align: center;
     background-color: rgb(28, 3, 28);
     border: rgb(104, 9, 102) solid;

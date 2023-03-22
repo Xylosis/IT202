@@ -23,22 +23,22 @@ if($descr == NULL){
 }
 
 if(is_numeric($name)){
-    if($error != ''){
+    if($error != ''){ //appending to show multiple error messages at once.
         $error .= `\n\n` . ' ERROR: Product Name contains a number, only enter characters.';
     }
-    else{
+    else{ //only error message so far.
         $error = 'Product Name contains a number, only enter characters.';
     }
 }
 
 if(!isset($error) ) { $error = ''; }
 
-if($error != '') {
+if($error != '') { //send error messages to the form.
     include('create.php');
     exit();
 }
 
-$descr = htmlspecialchars($descr);
+$descr = htmlspecialchars($descr); //SQL / HTML validation
 $name = htmlspecialchars($name);
 
 require_once('../Phase2/database.php');
@@ -89,7 +89,7 @@ catch(PDOException $exception){
 }
 $statement->closeCursor();
 
-header("Location: ../Phase2/show.php?category_id=$category_id"); //take user back to inventory page with their item category selected.
+header("Location: ../Phase2/show.php?category_id=$category_id"); //redirect user back to inventory page with their item category selected.
 exit();
 
 ?>
