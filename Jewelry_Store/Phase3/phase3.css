@@ -1,0 +1,52 @@
+/*Name: Andrew Dickman
+Date: 3/22/23
+IT202 - 004
+Phase 3 - Create Page
+*/
+
+#addForm{
+    text-align: center;
+    background-color: rgb(28, 3, 28);
+    border: rgb(104, 9, 102) solid;
+    border-radius:1rem;
+    padding:1rem 1rem 2rem 1rem;
+    margin:0 30rem;
+  }
+
+  .addformlbl {
+    margin-right: 0.3rem ;
+  }
+  
+  #addForm h2 {
+    padding-bottom: .5rem;
+  }
+
+  #category_id {
+    background-color: rgb(240,240,240);
+    border: rgb(104, 9, 102) solid;
+    border-radius:.5rem;
+  }
+
+  #dropdownop{
+    background-color: rgb(240,240,240);
+  }
+
+  #txtinputform {
+    background-color: rgb(240,240,240);
+  }
+
+  #txtinputform {
+    background-color: rgb(240,240,240);
+    border: rgb(104, 9, 102) solid;
+    border-radius:.35rem;
+  }
+
+  #addForm textarea {
+      border: rgb(104, 9, 102) solid;
+      border-radius: .4rem;
+  }
+
+  #errormsg {
+    margin: 1rem auto;
+    line-height: 2rem;
+  }

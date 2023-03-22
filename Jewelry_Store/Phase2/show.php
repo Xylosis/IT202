@@ -92,7 +92,7 @@ $statement3->closeCursor();
                 <td class = "jDisplay" id="jCode"><?php echo $product['jewelryCode']; ?></td>
                 <td class = "jDisplay" id="jName"><?php echo $product['jewelryName']; ?></td>
                 <td class = "jDisplay" id="jDescription"><?php echo $product['description']; ?></td>
-                <td class = "jDisplay" id="jPrice"><?php echo $product['price']; ?></td>
+                <td class = "jDisplay" id="jPrice"><?php echo $product['price'] . ' USD'; ?></td>
                 <td class = "jDisplay" id="jDate" class="right"><?php echo $product['dateAdded']; ?>
                 </td>
             </tr>
