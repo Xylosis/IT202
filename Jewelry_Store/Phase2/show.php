@@ -34,6 +34,12 @@ $statement3->execute();
 $products = $statement3->fetchAll();
 $statement3->closeCursor();
 
+session_start();
+
+if(!isset($_SESSION['is_valid_admin'])){
+    $_SESSION['is_valid_admin'] = false;
+}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -55,11 +61,16 @@ $statement3->closeCursor();
             <img src="../images/broken infinity.jpg" alt="logo">
         </figure>
         <h1>Inventory - Finite Jewelers</h1>
+        <?php if($_SESSION['is_valid_admin'] == true){?>
+        <h3><?php echo "Welcome " . $_SESSION['firstName'] ." ". $_SESSION['lastName'] . " (" . $_SESSION['email'] . ")"; ?></h3>
+        <?php } ?>
         <nav> <!-- Nav bar to other pages -->
             <ul id = "links">
                 <li id="formlinkli"> <a href="../home.php"> Home Page </a> </li>
-                <li> <a href="../form.php"> Shipping Form </a> </li>
+                <?php if($_SESSION['is_valid_admin'] == true){ ?> <li> <a href="../form.php"> Shipping Form </a> </li><?php } //hides form button only if user is signed out.?>
                 <li> <a href="../contact.php"> Contact Us! </a> </li>
+                <?php if($_SESSION['is_valid_admin'] == false){ ?><li><a class="navLinks" href="../Phase4/login.php">Login</a></li><?php } //shows login button only if user is signed out.?>
+                <?php if($_SESSION['is_valid_admin'] == true){ ?><li><a class="navLinks" href="../Phase4/logout.php">Logout</a></li><?php } //shows logout button only if user is signed in.?>
             </ul>
         </nav>
     </header>
@@ -100,8 +111,10 @@ $statement3->closeCursor();
         </table>
     </section>
     <br>
+    <?php if($_SESSION['is_valid_admin'] == true){ ?> 
     <h2 style="margin-bottom:.4em;">Have something to sell?</h2>
     <a href="../Phase3/create.php" class="formbuttons">Click here to add your Jewelery to our Inventory.</a>
+    <?php } //hides link to add items from logged out users.?> 
 </main>    
     <footer>        
         <p>Contact Info:</p>

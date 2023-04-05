@@ -11,6 +11,13 @@
     if(!isset($Width) ) { $Width; }
     if(!isset($Length) ) { $Length; }
     if(!isset($val) ) { $val; }
+
+    session_start();
+    
+    if(!isset($_SESSION['is_valid_admin']) || $_SESSION['is_valid_admin'] == false){
+        header("Location: Phase4/unauthorized.php");
+        exit();
+    }
 ?> 
 
 <!DOCTYPE html>
@@ -32,10 +39,15 @@
         </figure>
         <h1>Shipping Form - Finite Jewelers</h1>
         <nav>
+        <?php if($_SESSION['is_valid_admin'] == true){?>
+        <h3><?php echo "Welcome " . $_SESSION['firstName'] ." ". $_SESSION['lastName'] . " (" . $_SESSION['email'] . ")"; ?></h3>
+        <?php } ?>
             <ul id = "links">
                 <li id="formlinkli"> <a href="home.php"> Home Page </a> </li>
                 <li> <a href="Phase2/show.php"> Inventory </a> </li>
                 <li> <a href="contact.php"> Contact Us! </a> </li>
+                <?php if($_SESSION['is_valid_admin'] == false){ ?><li><a class="navLinks" href="./Phase4/login.php">Login</a></li><?php } //shows login button only if user is signed out.?>
+                <?php if($_SESSION['is_valid_admin'] == true){ ?><li><a class="navLinks" href="./Phase4/logout.php">Logout</a></li><?php } //shows logout button only if user is signed in.?>
             </ul>
         </nav>
     </header>

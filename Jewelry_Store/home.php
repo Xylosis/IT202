@@ -1,3 +1,13 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['is_valid_admin'])){
+        $_SESSION['is_valid_admin'] = false;
+    }
+    // if(!isset($_SESSION['firstName'])){
+    //     $_SESSION['firstName'] = "You're";
+    // }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,10 +25,15 @@
         <h1>Finite Jewelers</h1>
         <img src="images/broken infinity.jpg" alt="logo" id="logo"> <br>
         <nav> <!-- Nav bar to other pages -->
+        <?php if($_SESSION['is_valid_admin'] == true){?>
+        <h3><?php echo "Welcome " . $_SESSION['firstName'] ." ". $_SESSION['lastName'] . " (" . $_SESSION['email'] . ")"; ?></h3>
+        <?php } ?>
             <ul id="links">
-                <li id="formlinkli"><span id="formlink"><a class="navLinks" href="form.php"> Shipping Form </a></span></li>
+                <?php if($_SESSION['is_valid_admin'] == true){ ?><li id="formlinkli"><span id="formlink"><a class="navLinks" href="form.php"> Shipping Form </a></span></li> <?php } //hides form button only if user is signed out.?>
                 <li> <a class="navLinks" href="Phase2/show.php"> Inventory </a> </li>
                 <li><a class="navLinks" href="contact.php"> Contact Us! </a></li>
+                <?php if($_SESSION['is_valid_admin'] == false){ ?><li><a class="navLinks" href="./Phase4/login.php">Login</a></li><?php } //shows login button only if user is signed out.?>
+                <?php if($_SESSION['is_valid_admin'] == true){ ?><li><a class="navLinks" href="./Phase4/logout.php">Logout</a></li><?php } //shows logout button only if user is signed in.?>
             </ul>
         </nav>
     </header>
