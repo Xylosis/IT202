@@ -91,6 +91,7 @@ if(!isset($_SESSION['is_valid_admin'])){
         <h2><?php echo $category_name; ?></h2>
         <table id="displayInfo">
             <tr class="categoryInfoHead">
+                <?php if($_SESSION['is_valid_admin'] == true){ ?><th class = "jDisplay" >Delete?</th> <?php } ?>
                 <th class = "jDisplay" >Code</th>
                 <th class = "jDisplay" >Name</th>
                 <th class = "jDisplay" >Description</th>
@@ -100,6 +101,7 @@ if(!isset($_SESSION['is_valid_admin'])){
  
             <?php foreach ($products as $product) : ?> <!-- Looping through database to show item information -->
             <tr class="categoryInfo">
+                <?php if($_SESSION['is_valid_admin'] == true){ ?> <td class = "jDisplay" id="jDelete"> <form action="../Phase4/delete_entry.php" method="Post"><input type="hidden" name="jCodeDel" value="<?php echo $product['jewelryCode']; ?>"><input type="submit" value="Delete Entry"></form> </td> <?php } ?>
                 <td class = "jDisplay" id="jCode"><?php echo $product['jewelryCode']; ?></td>
                 <td class = "jDisplay" id="jName"><?php echo $product['jewelryName']; ?></td>
                 <td class = "jDisplay" id="jDescription"><?php echo $product['description']; ?></td>
