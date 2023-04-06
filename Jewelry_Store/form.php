@@ -13,9 +13,9 @@
     if(!isset($val) ) { $val; }
 
     session_start();
-    
+    //if session is not currently going on or they arent logged in
     if(!isset($_SESSION['is_valid_admin']) || $_SESSION['is_valid_admin'] == false){
-        header("Location: Phase4/unauthorized.php");
+        header("Location: Phase4/unauthorized.php"); //redirect user to unauthorized page.
         exit();
     }
 ?> 
@@ -40,7 +40,7 @@
         <h1>Shipping Form - Finite Jewelers</h1>
         <nav>
         <?php if($_SESSION['is_valid_admin'] == true){?>
-        <h3><?php echo "Welcome " . $_SESSION['firstName'] ." ". $_SESSION['lastName'] . " (" . $_SESSION['email'] . ")"; ?></h3>
+        <h3 id="welcomeMsg"><?php echo "Welcome, " . $_SESSION['firstName'] ." ". $_SESSION['lastName'] . " (" . $_SESSION['email'] . ")."; ?></h3>
         <?php } ?>
             <ul id = "links">
                 <li id="formlinkli"> <a href="home.php"> Home Page </a> </li>
@@ -54,7 +54,7 @@
     <main> <!-- A LOT of printing -->
     <h2>Label Form</h2>
     <?php if(!empty($error_message)) { ?> <p id="errormsg">ERROR: <?php echo htmlspecialchars($error_message); ?></p>  <?php } ?>
-    <form action="label.php" method="Post">
+    <form action="label.php" id="shippingform" method="Post">
         <div id="deliveryinfo">
             <h3 style="margin-bottom: 1.5rem;">Delivery Information:</h3>
             <div class="inputfields">

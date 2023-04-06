@@ -18,7 +18,7 @@
     if(!isset($descr) ) { $descr = ''; }
 
     session_start();
-
+    //redirect user to unauthorized.php error page if they are logged out and try to access page.
     if(!isset($_SESSION['is_valid_admin']) || $_SESSION['is_valid_admin'] == false){
         header("Location: ../Phase4/unauthorized.php");
         exit();
@@ -51,7 +51,7 @@
         </figure>
         <h1>Inventory Form - Finite Jewelers</h1>
         <?php if($_SESSION['is_valid_admin'] == true){?>
-        <h3><?php echo "Welcome " . $_SESSION['firstName'] ." ". $_SESSION['lastName'] . " (" . $_SESSION['email'] . ")"; ?></h3>
+        <h3 id="welcomeMsg"><?php echo "Welcome, " . $_SESSION['firstName'] ." ". $_SESSION['lastName'] . " (" . $_SESSION['email'] . ")."; ?></h3>
         <?php } ?>
         <nav> <!-- Nav bar to other pages -->
             <ul id = "links">

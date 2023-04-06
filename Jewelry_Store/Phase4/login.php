@@ -1,11 +1,13 @@
 <?php
-session_start();
+if(session_status() !== 2){ //so you dont get the note that it got ignored, if session_status() returns 2, then session already started.
+    session_start(); //if getting errors, remove everything around this session start, the if, and check what session_status() returns
+} //set up variables 
 if (!isset($login_message)) {
     $login_message = '';
-}
+} 
 if(!isset($_SESSION['is_valid_admin'])){
-    echo "SETTING!";
-    $_SESSION['is_valid_admin'] = false;
+    //echo "SETTING!";
+    $_SESSION['is_valid_admin'] = false; 
 }
 ?>
 
@@ -18,6 +20,7 @@ if(!isset($_SESSION['is_valid_admin'])){
     <title>Login</title>
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="../Phase3/phase3.css">
+    <link rel="stylesheet" href="phase4.css">
 </head>
 <body>
     <h1>Finite Jewelers</h1>
@@ -30,12 +33,12 @@ if(!isset($_SESSION['is_valid_admin'])){
                 <li> <a href="../contact.php"> Contact Us! </a> </li>
             </ul>
         </nav>
-        <h3>Login Page</h3>
-        <p><?php echo "_SESSION STATUS: " . $_SESSION['is_valid_admin']; ?></p>
+        <h2 style="padding-bottom:1rem;">Login Page</h2>
+        <!-- form to log in. -->
+        <form action="authenticate.php" id="addForm" method="Post"> 
         <p><?php if($_SESSION['is_valid_admin'] == true){  echo $_SESSION['login_message']; ?></p> 
             <a href="logout.php">Logout</a>
-        <?php } else { if($login_message != '') {?> <p id="errormsg"><?php echo $login_message; ?> </p>  <?php }?>
-        <form action="authenticate.php" id="addForm" method="Post">   
+        <?php } else { if($login_message != '') {?> <p id="errormsg"><?php echo $login_message; ?> </p>  <?php }?> <!-- login_message = error message -->
             <label for="email">Email: </label>
             <input type="text" id="email" name="email" placeholder="johndoe@gmail.com" required> <br><br>
             <label for="password">Password: </label>

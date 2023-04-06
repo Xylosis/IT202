@@ -193,3 +193,23 @@ footer p{
     border: solid .5rem black;
     border-radius: .5rem;
 }
+
+#welcomeMsg {
+    text-align: center;
+    background-color: rgb(28, 3, 28);
+    border: rgb(104, 9, 102) solid;
+    border-radius:1rem;
+    padding: 1.5rem  1rem;
+    margin: .5rem 20rem;
+    letter-spacing: .05rem;
+}
+
+#shippingform {
+    text-align: center;
+    background-color: rgb(28, 3, 28);
+    border: rgb(104, 9, 102) solid;
+    border-radius:1rem;
+    padding:1rem 1rem 2rem 1rem;
+    margin:0 22rem;
+    width: fit-content;
+}

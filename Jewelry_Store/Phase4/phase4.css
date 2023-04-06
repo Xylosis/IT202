@@ -1,0 +1,37 @@
+#errormsg {
+    width: fit-content;
+    padding: .5rem 3rem;
+    letter-spacing: .05rem;
+}
+
+#deletebtnSQL {
+    display: inline-block;
+    padding: .4rem 1rem;
+    text-decoration: none;
+    list-style-type: none;
+    text-align: center;
+    border: solid .1rem black;
+    background-color: white;
+    border-radius: 2rem;
+    transition: transform 0.25s cubic-bezier(0,0,.62,1);
+    text-shadow: .2rem .2rem .7rem rgb(76, 76, 76);
+}
+
+#deletebtnSQL:hover {
+    background-color: #f1ff5c;
+    cursor:pointer;
+    box-shadow: 0 0.5rem 0.5rem -0.4rem #f1ff5c;
+    transform: translateY(-0.25rem);
+    transition: transform 0.25s cubic-bezier(0,0,.62,1);
+}
+
+#errormsgU {
+    background-color: rgb(146, 10, 10);
+    border: solid .5rem black;
+    border-radius: 2rem;
+    padding: 1.5rem 0rem;
+    margin: auto;
+    letter-spacing: .05rem;
+    width:80%;
+    line-height: 3rem; 
+}

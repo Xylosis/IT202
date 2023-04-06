@@ -54,6 +54,7 @@ if(!isset($_SESSION['is_valid_admin'])){
     <link rel="stylesheet" href="../styles.css" />
     <link rel="stylesheet" href="show.css" />
     <link rel="icon" href="../images/broken infinity.jpg">
+    <link rel="stylesheet" href="../Phase4/phase4.css">
 </head>
 <body>
 <header>
@@ -62,7 +63,7 @@ if(!isset($_SESSION['is_valid_admin'])){
         </figure>
         <h1>Inventory - Finite Jewelers</h1>
         <?php if($_SESSION['is_valid_admin'] == true){?>
-        <h3><?php echo "Welcome " . $_SESSION['firstName'] ." ". $_SESSION['lastName'] . " (" . $_SESSION['email'] . ")"; ?></h3>
+        <h3 id="welcomeMsg"><?php echo "Welcome, " . $_SESSION['firstName'] ." ". $_SESSION['lastName'] . " (" . $_SESSION['email'] . ")."; ?></h3>
         <?php } ?>
         <nav> <!-- Nav bar to other pages -->
             <ul id = "links">
@@ -101,7 +102,7 @@ if(!isset($_SESSION['is_valid_admin'])){
  
             <?php foreach ($products as $product) : ?> <!-- Looping through database to show item information -->
             <tr class="categoryInfo">
-                <?php if($_SESSION['is_valid_admin'] == true){ ?> <td class = "jDisplay" id="jDelete"> <form action="../Phase4/delete_entry.php" method="Post"><input type="hidden" name="jCodeDel" value="<?php echo $product['jewelryCode']; ?>"><input type="submit" value="Delete Entry"></form> </td> <?php } ?>
+                <?php if($_SESSION['is_valid_admin'] == true){ ?> <td class = "jDisplay" id="jDelete"> <form action="../Phase4/delete_entry.php" method="Post"><input type="hidden" name="jCodeDel" value="<?php echo $product['jewelryCode']; ?>"><input type="submit" id="deletebtnSQL" value="Delete Entry"></form> </td> <?php } ?>
                 <td class = "jDisplay" id="jCode"><?php echo $product['jewelryCode']; ?></td>
                 <td class = "jDisplay" id="jName"><?php echo $product['jewelryName']; ?></td>
                 <td class = "jDisplay" id="jDescription"><?php echo $product['description']; ?></td>

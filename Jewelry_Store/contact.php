@@ -23,7 +23,7 @@
     <h1>Contact Us Page will be functional shortly!</h1>
     <nav>
     <?php if($_SESSION['is_valid_admin'] == true){?>
-        <h3><?php echo "Welcome " . $_SESSION['firstName'] ." ". $_SESSION['lastName'] . " (" . $_SESSION['email'] . ")"; ?></h3>
+        <h3 id="welcomeMsg"><?php echo "Welcome, " . $_SESSION['firstName'] ." ". $_SESSION['lastName'] . " (" . $_SESSION['email'] . ")."; ?></h3>
         <?php } ?>
         <ul id="links">
             <li><a href="home.php" id="formlinkli"> Home Page </a></li>

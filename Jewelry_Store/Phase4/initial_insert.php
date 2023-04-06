@@ -1,9 +1,9 @@
 <?php
-
+//insert function.
 function add_jewelry_manager($email, $password, $firstName, $lastName) {
 
     require('../Phase2/database.php');
-    
+    //insert query
     $hash = password_hash($password, PASSWORD_DEFAULT);
     echo "$hash <br>";
     $query = 'INSERT INTO jewelryManagers (emailAddress, password, firstName, lastName)
