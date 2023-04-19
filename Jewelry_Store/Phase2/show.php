@@ -57,6 +57,9 @@ if(!isset($_SESSION['is_valid_admin'])){
     <link rel="stylesheet" href="../Phase4/phase4.css">
 </head>
 <body>
+    <div id="abortDel">
+        <h5>Delete has been aborted</h5>
+    </div>
 <header>
         <figure>
             <img src="../images/broken infinity.jpg" alt="logo">
@@ -97,13 +100,12 @@ if(!isset($_SESSION['is_valid_admin'])){
                 <th class = "jDisplay" >Name</th>
                 <th class = "jDisplay" >Description</th>
                 <th class = "jDisplay" >Price</th>
-                <th class = "jDisplay"  class="right">Date/Time Added</th>
+                <th class = "jDisplay" class="right">Date/Time Added</th>
             </tr>
- 
             <?php foreach ($products as $product) : ?> <!-- Looping through database to show item information -->
-            <tr class="categoryInfo">
-                <?php if($_SESSION['is_valid_admin'] == true){ ?> <td class = "jDisplay" id="jDelete"> <form action="../Phase4/delete_entry.php" method="Post"><input type="hidden" name="jCodeDel" value="<?php echo $product['jewelryCode']; ?>"><input type="submit" id="deletebtnSQL" value="Delete Entry"></form> </td> <?php } ?>
-                <td class = "jDisplay" id="jCode"><?php echo $product['jewelryCode']; ?></td>
+            <tr class="categoryInfo"> <!-- action="../Phase4/delete_entry.php" -->
+                <?php if($_SESSION['is_valid_admin'] == true){ ?> <td class = "jDisplay" id="jDelete"> <form action="../Phase4/delete_entry.php" method="Post" id="deleteForm"><input type="hidden" name="jCodeDel" value="<?php echo $product['jewelryCode']; ?>"><input type="submit" id="deletebtnSQL"  class="theDeleteBtn" value="Delete Entry"></form> </td> <?php } ?>
+                <td class = "jDisplay" id="jCode"><a id="detailLink" href="../Phase5/details.php?jewelry_id=<?php echo $product['jewelryID'];?>"><?php echo $product['jewelryCode']; ?></a></td>
                 <td class = "jDisplay" id="jName"><?php echo $product['jewelryName']; ?></td>
                 <td class = "jDisplay" id="jDescription"><?php echo $product['description']; ?></td>
                 <td class = "jDisplay" id="jPrice"><?php echo $product['price'] . ' USD'; ?></td>
@@ -123,5 +125,7 @@ if(!isset($_SESSION['is_valid_admin'])){
         <p>Contact Info:</p>
         <p>Email: <a href="emailto:ajd93@njit.edu">ajd93@njit.edu</a></p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js" integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
+    <script src="../Phase5/index.js"></script>
 </body>
 </html>

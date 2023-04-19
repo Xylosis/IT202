@@ -1,5 +1,11 @@
 <?php
-
+    /*
+        Andrew Dickman
+        4/5/2023
+        IT202-004
+        Phase 4 - Jewelry Store Project
+        ajd93@njit.edu
+    */
     session_start();
 
     //require_once('../Phase2/database.php');

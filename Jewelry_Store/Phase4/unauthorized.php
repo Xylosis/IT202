@@ -1,4 +1,13 @@
 <?php
+
+    /*
+        Andrew Dickman
+        4/5/2023
+        IT202-004
+        Phase 4 - Jewelry Store Project
+        ajd93@njit.edu
+    */
+
     //if there is a HTTP_REFERER (url of prev page where they were redirected from), print it.
     session_start();
     if (isset($_SERVER['HTTP_REFERER'])){

@@ -1,4 +1,13 @@
 <?php
+
+    /*
+        Andrew Dickman
+        4/5/2023
+        IT202-004
+        Phase 4 - Jewelry Store Project
+        ajd93@njit.edu
+    */
+
     //get code from row that delete button is in
     $jCode = filter_input(INPUT_POST, 'jCodeDel', FILTER_VALIDATE_INT);
     //debugging bug will never show up on real page, since user is redirected.

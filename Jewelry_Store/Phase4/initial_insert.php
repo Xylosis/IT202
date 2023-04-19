@@ -1,4 +1,13 @@
 <?php
+
+    /*
+        Andrew Dickman
+        4/5/2023
+        IT202-004
+        Phase 4 - Jewelry Store Project
+        ajd93@njit.edu
+    */
+
 //insert function.
 function add_jewelry_manager($email, $password, $firstName, $lastName) {
 

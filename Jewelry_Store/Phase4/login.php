@@ -1,4 +1,14 @@
 <?php
+
+    /*
+        Andrew Dickman
+        4/5/2023
+        IT202-004
+        Phase 4 - Jewelry Store Project
+        ajd93@njit.edu
+    */
+
+
 if(session_status() !== 2){ //so you dont get the note that it got ignored, if session_status() returns 2, then session already started.
     session_start(); //if getting errors, remove everything around this session start, the if, and check what session_status() returns
 } //set up variables 

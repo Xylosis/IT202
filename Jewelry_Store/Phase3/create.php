@@ -45,6 +45,9 @@
     <link rel="stylesheet" href="phase3.css">
 </head>
 <body>
+    <div id="abortDel">
+        <h5>Form Inputs are not Valid</h5>
+    </div>
     <header>
         <figure>
             <img src="../images/broken infinity.jpg" alt="logo">
@@ -67,7 +70,7 @@
     <section id="addForm">
     <h2>Inventory Addition Form</h2>
     <?php if(!empty($error)) { ?> <p id="errormsg">ERROR: <?php echo htmlspecialchars($error); ?></p>  <?php } ?> <!-- Displays error msg -->
-    <form action="add_jewelery.php" method="Post">
+    <form action="add_jewelery.php" method="Post" id="addJewelForm"> <!-- add_jewelery.php -->
         <label for="category_id" class="addformlbl" >Category:</label>
         <select name="category_id" id="category_id"> <!-- Displays drop down menu -->
             <?php foreach ($categories as $category) : ?>
@@ -77,18 +80,18 @@
             <?php endforeach; ?>
         </select> <br> <br><br>
         <label for="Code" class="addformlbl">Code: </label>
-        <input style="-webkit-appearance: none; -moz-appearance: textfield; margin: 0;" type="number" min="1000" max="9999" name="code" class="txtinputform" placeholder="1000-9999" required> <br><br>
-        <label for="Name" class="addformlbl">Name: </label>
-        <input type="text" name="name" class="txtinputform" placeholder="Diamond Ring" required> <br><br>
+        <input style="-webkit-appearance: none; -moz-appearance: textfield; margin: 0;" type="number" min="1000" max="9999" id="code" name="code" class="txtinputform" placeholder="1000-9999" required> <span id="nextCode" style="color:darkred;">*</span> <br><br>
+        <label for="Name" class="addformlbl">Name: </label> 
+        <input type="text" id="name" name="name" class="txtinputform" placeholder="Diamond Ring" required> <span id="nextName" style="color:darkred;">*</span> <br><br>
         <label for="List Price" class="addformlbl">Price: </label>
-        $ <input type="number" step="0.01" min="1.00" name="price" class="txtinputform" placeholder="100.99" required> <br><br>
-        <h3>Description:</h3>
+        $ <input type="number" id="price" step="0.01" min="1.00" name="price" class="txtinputform" placeholder="100.99" required> <span id="nextPrice" style="color:darkred;">*</span> <br><br>
+         <h3>Description:</h3> 
         <label>
-            <textarea cols="50"  rows="7" name="description" placeholder="Diamond, 24k Gold, Multistone Embedded, etc." value="<?php echo htmlspecialchars($descr);?>"></textarea>
+            <textarea cols="50"  rows="7" maxlength="255" name="description" id="description" placeholder="Diamond, 24k Gold, Multistone Embedded, etc." value="<?php echo htmlspecialchars($descr);?>"></textarea> 
         </label>
         <br><br>
         <input type="Submit" class="formbuttons" value="Submit">
-        <button type="reset" class="formbuttons">Reset</button>
+        <button type="reset" id="resetBUTTON" class="formbuttons">Reset</button>
             
     </form>
     </section>
@@ -97,5 +100,7 @@
         <p>Contact Info:</p>
         <p>Email: <a href="emailto:ajd93@njit.edu">ajd93@njit.edu</a></p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js" integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
+    <script src="../Phase5/index.js"></script>
 </body>
 </html>
