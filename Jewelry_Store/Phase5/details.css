@@ -1,0 +1,31 @@
+#jewelryIMG{
+    width: 20rem;
+    height: 15rem;
+    border-radius: 3rem;
+    border: rgb(28, 3, 28) solid;
+    margin-left: 8rem;
+    float: left;
+}
+
+main p {
+    font-size: large;
+}
+
+#itemContainer {
+    width: 80%;
+    padding: 1%;
+    margin-left: 6rem
+}
+
+#deeperContainer{
+    background-color: rgb(28, 3, 28);
+    border: rgb(104, 9, 102) solid;
+    border-radius:1rem;
+    margin-right:-5rem;
+    padding: 2rem 2rem 3rem 0;
+}
+
+.itemText{
+    margin-left:37rem;
+    text-align: left;
+}

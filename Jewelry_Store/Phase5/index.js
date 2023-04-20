@@ -86,6 +86,23 @@ $(document).ready( () => {
 
     });
 
+    //blur and unblur img on hover
+    $("##jewelryIMG").each( (img) => {
+
+        $(img).mouseover( function() {
+            const src = $(this).attr('src');
+            const new_src = src.replace("-bw.jpg", "-color.jpg");
+            $(this).attr('src', new_src);
+        });
+
+        $(img).mouseout( function() {
+            const src = $(this).attr('src');
+            const new_src = src.replace("-color.jpg", "-bw.jpg");
+            $(this).attr('src', new_src);
+        });
+
+    });
+
     //sticky error message
     $(window).scroll(function(e){ 
         var $el = $('#abortDel'); 
