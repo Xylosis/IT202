@@ -93,6 +93,7 @@ if(!isset($_SESSION['is_valid_admin'])){
     </aside>
     <section>
         <h2><?php echo $category_name; ?></h2>
+        <h3>Click an item's code to see that item's details page!</h3>
         <table id="displayInfo">
             <tr class="categoryInfoHead">
                 <?php if($_SESSION['is_valid_admin'] == true){ ?><th class = "jDisplay" >Delete?</th> <?php } ?>

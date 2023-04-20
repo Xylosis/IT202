@@ -76,11 +76,24 @@ a:visited{
     padding: 0 20rem;
     text-align: justify;
     letter-spacing: .05rem;
-    background-color: rgba(224, 18, 18,.7);
+    background-color: rgba(224, 18, 18,.8);
     font-size:x-large;
     display:none;
 }
 
 #detailLink:visited{
-    color: inherit;
+    color: rgb(50,50,231) ;
+}
+
+#detailLink{
+    color: rgb(50,50,231);
+}
+
+#detailLink:hover{
+    color:rgb(75, 75, 241);
+    text-decoration: underline;
+    cursor:pointer;
+    box-shadow: 0 0.5rem 0.5rem -0.4rem #f1ff5c;
+    transform: translateY(-0.25rem);
+    transition: transform 0.25s cubic-bezier(0,0,.62,1);
 }

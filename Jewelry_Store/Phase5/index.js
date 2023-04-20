@@ -6,7 +6,7 @@ $(document).ready( () => {
     const stall = async () => {
         const delay = ms => new Promise(res => setTimeout(res, ms));
 
-        await delay(4500);
+        await delay(5000);
         
         console.log("Waited 5s");
         document.getElementById("abortDel").style.display="none";
@@ -86,31 +86,14 @@ $(document).ready( () => {
 
     });
 
-    //blur and unblur img on hover
-    $("##jewelryIMG").each( (img) => {
-
-        $(img).mouseover( function() {
-            const src = $(this).attr('src');
-            const new_src = src.replace("-bw.jpg", "-color.jpg");
-            $(this).attr('src', new_src);
-        });
-
-        $(img).mouseout( function() {
-            const src = $(this).attr('src');
-            const new_src = src.replace("-color.jpg", "-bw.jpg");
-            $(this).attr('src', new_src);
-        });
-
-    });
-
     //sticky error message
     $(window).scroll(function(e){ 
         var $el = $('#abortDel'); 
         var isPositionFixed = ($el.css('position') == 'fixed');
-        if ($(this).scrollTop() > 200 && !isPositionFixed){ 
+        if ($(this).scrollTop() > 0 && !isPositionFixed){ 
           $el.css({'position': 'fixed', 'top': '-25px'}); 
         }
-        if ($(this).scrollTop() < 200 && isPositionFixed){
+        if ($(this).scrollTop() < 0 && isPositionFixed){
           $el.css({'position': 'static', 'top': '0px'}); 
         } 
     });
@@ -125,29 +108,26 @@ $(document).ready( () => {
         var badOne = "";
     })
 
-
-
-
-    // preload images
-    $("#image_list a").each( (index, link) => {
-        const image = new Image();
-        image.src = link.href;
-    });
- 
-    // attach event handlers for links
-    $("#image_list a").click( evt => {
-        // get clicked <a> tag
-        const link = evt.currentTarget;
-        
-        // swap image
-        $("#main_image").attr("src", link.href);
-        
-        //swap caption
-        $("#caption").text(link.title);
-        // cancel the default action of the link
-        evt.preventDefault();
-        // move focus to first thumbnail
-        $("li:first-child a").focus();
-    });
+    //blur and unblur img on hover
+    const image = document.getElementById("jewelryIMG");
+    try{
+        image.addEventListener("mouseover", mouseOVER);
+        image.addEventListener("mouseout", mouseOUT);
+    }
+    catch(TypeError){ //for every page's console thats not the details.php page 
+        console.log("Dw about this.");
+    }
+    function mouseOVER() {
+        console.log("MOUSEOVERRR!");
+        const src = image.src;
+        const new_src = src.replace("b.png",".png");
+        image.src = new_src;
+    }
+    function mouseOUT(){
+        console.log("MOUSEOUTT!");
+        const src = image.src;
+        const new_src = src.replace(".png","b.png");
+        image.src = new_src;
+    }
  
 });

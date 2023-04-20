@@ -22,7 +22,6 @@ if(empty($product)){
     exit();
 } else{ 
     $jewelryProduct = $product[0];
-    print_r($jewelryProduct);
 }
 
 ?>
@@ -60,12 +59,13 @@ if(empty($product)){
     </header>
 
     <main>
-        <h2> <?php echo "'". $jewelryProduct['jewelryName'] . "' Details";?></h2>
+        <h1> <?php echo "'". $jewelryProduct['jewelryName'] . "' Details";?></h1>
+        <h3> >> Hover over the image to unblur it! << </h3>
         <div id="itemContainer">
             <div id="deeperContainer">
                 <div>
                     <!-- IMAGES ARE DISPLAYED THRU {jewelry_id}.png SO MAKE SURE IMG HAS JEWELRY ID AS ITS FILE NAME -->
-                    <img src="<?php echo $jewelry_id;?>.png" alt="testimg" id="jewelryIMG">
+                    <img src="../images/<?php echo $jewelry_id;?>b.png" alt="testimg" id="jewelryIMG">
                 </div>
                 <div class="itemText">
                     <p><b>Item Code: </b> <?php echo $jewelryProduct['jewelryCode'] ?></p>

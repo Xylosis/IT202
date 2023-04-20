@@ -49,19 +49,19 @@
         <div id="selection">
             <p id="selectionp">Here are some images of our current inventory:</p>
             <figure>
-                <img class="rings"src="images/amethystdiamond14k ring.jpg" alt="amethyst">
+                <img class="rings"src="images/1.png" alt="amethyst">
                 <figcaption>Fig 1. Amethyst + Diamond + 14k Gold Ring</figcaption>
             </figure>
             <figure>
-                <img class="rings"src="images/sapphire diamond 14k gold ring.jpg" alt="sapphire">
+                <img class="rings"src="images/2.png" alt="sapphire">
                 <figcaption>Fig 2. Sapphire + Diamond + 14k Gold Ring</figcaption>
             </figure>
             <figure>
-                <img class="rings"src="images/white gold ruby ring.jpg" alt="ruby">
+                <img class="rings"src="images/3.png" alt="ruby">
                 <figcaption>Fig 3. Ruby + White Gold Ring</figcaption>
             </figure>
             <figure>
-                <img class="rings"src="images/emeraldring.jpg" alt="emerald">
+                <img class="rings"src="images/emeraldring.png" alt="emerald">
                 <figcaption>Fig 4. Emerald Ring</figcaption>
             </figure>
         </div>
