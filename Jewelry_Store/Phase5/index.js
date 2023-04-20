@@ -1,8 +1,17 @@
 "use strict";
 
+/*
+    Andrew Dickman
+    4/5/2023
+    IT202-004
+    Phase 5 - Jewelry Store Project
+    ajd93@njit.edu
+*/
+
+//once DOM is fully loaded
 $(document).ready( () => {
 
-    //error message time to live (show on screen)
+    //message time to live (show on screen)
     const stall = async () => {
         const delay = ms => new Promise(res => setTimeout(res, ms));
 
@@ -17,15 +26,15 @@ $(document).ready( () => {
     let obj = document.querySelectorAll("#deleteForm");
     for(let i = 0; i < obj.length; i++){
         obj[i].addEventListener("submit", (event)=>{
-            if(!confirm("Are you sure you want to delete this item?")){
-                event.preventDefault();
-                document.getElementById("abortDel").style.display="flex";
+            if(!confirm("Are you sure you want to delete this item?")){ //if the user hit no, they don't want to delete the item.
+                event.preventDefault(); //prevent submission of form
+                document.getElementById("abortDel").style.display="flex"; //these next two lines and function are for message
                 stall();
                 //document.getElementById("abortDel").style.display="none";
             }
         });
     }
-
+    //once the form is submitted
     $("#addJewelForm").submit( event => {
 
         let valid = true;
@@ -38,6 +47,7 @@ $(document).ready( () => {
         $("#code").next().text("*");
         $("#name").next().text("*");
         $("#price").next().text("*");
+
         //highest text box to direct focus to when showing error
         var badOne = "";
 
@@ -86,7 +96,7 @@ $(document).ready( () => {
 
     });
 
-    //sticky error message
+    //sticky message after declining confirmation when deleting item
     $(window).scroll(function(e){ 
         var $el = $('#abortDel'); 
         var isPositionFixed = ($el.css('position') == 'fixed');
@@ -110,23 +120,23 @@ $(document).ready( () => {
 
     //blur and unblur img on hover
     const image = document.getElementById("jewelryIMG");
-    try{
+    try{ //add event listeners to the image
         image.addEventListener("mouseover", mouseOVER);
         image.addEventListener("mouseout", mouseOUT);
     }
-    catch(TypeError){ //for every page's console thats not the details.php page 
+    catch(TypeError){ //for every page's console thats not the details.php page, since they don't contain the image
         console.log("Dw about this.");
     }
-    function mouseOVER() {
+    function mouseOVER() { //when user mouses over the image
         console.log("MOUSEOVERRR!");
         const src = image.src;
-        const new_src = src.replace("b.png",".png");
+        const new_src = src.replace("b.png",".png"); //replace image src with the normal one
         image.src = new_src;
     }
-    function mouseOUT(){
+    function mouseOUT(){ //when user mouses out of image
         console.log("MOUSEOUTT!");
         const src = image.src;
-        const new_src = src.replace(".png","b.png");
+        const new_src = src.replace(".png","b.png"); //replace image src with the blurry one
         image.src = new_src;
     }
  

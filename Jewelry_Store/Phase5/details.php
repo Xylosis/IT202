@@ -1,7 +1,15 @@
 <?php
 
+    /*
+    Andrew Dickman
+    4/5/2023
+    IT202-004
+    Phase 5 - Jewelry Store Project
+    ajd93@njit.edu
+    */
+
 require_once('../Phase2/database.php');
-$jewelry_id = filter_input(INPUT_GET, 'jewelry_id', FILTER_VALIDATE_INT);
+$jewelry_id = filter_input(INPUT_GET, 'jewelry_id', FILTER_VALIDATE_INT); #grabbing jewelry_id
 
 $queryProduct = 'SELECT * FROM jewelry
                   WHERE jewelryID = :jewelry_id
@@ -18,10 +26,10 @@ if(!isset($_SESSION['is_valid_admin'])){
 }
 
 if(empty($product)){
-    header("Location: no_item.php?jewelry_id=$jewelry_id"); //redirect user back to inventory page with their item category selected.
+    header("Location: no_item.php?jewelry_id=$jewelry_id"); //redirect user if item with requested ID doesn't exist.
     exit();
 } else{ 
-    $jewelryProduct = $product[0];
+    $jewelryProduct = $product[0]; //set to first array returned by MySQL (so i dont have to use $product[0][1])
 }
 
 ?>
@@ -32,6 +40,12 @@ if(empty($product)){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Andrew Dickman">
+    <meta name="description" content="Jewler Website IT202 Final Phase - Details Page & JS">
+    <meta name="date" content="3/22/2023">
+    <meta name="coursename & section" content="IT202 - 004">
+    <meta name="Assignment name" content="Jewelry store Final Phase">
+    <meta name="email" content="ajd93@njit.edu">
     <title><?php echo $jewelryProduct['jewelryName'];?> Details - Finite Jewelers</title>
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="../Phase3/phase3.css">

@@ -1,5 +1,13 @@
 <?php
 
+    /*
+    Andrew Dickman
+    4/5/2023
+    IT202-004
+    Phase 5 - Jewelry Store Project
+    ajd93@njit.edu
+    */
+
     $jewelry_id = filter_input(INPUT_GET, 'jewelry_id', FILTER_VALIDATE_INT);
 
     session_start();
@@ -39,7 +47,7 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main> <!-- User is redirected here if they try to access a details page with a jewelry ID that isnt in DB -->
         <h1>ITEM DOESN'T EXIST</h1>
         <p style="font-size: x-large;">Sorry, but the item with a corresponding ID of '<?php echo $jewelry_id; ?>' doesn't exist within our database.</p>
         <p style="font-size: large; margin-bottom:3rem;"> If you believe this is an issue, please contact us at the email below.</p>
