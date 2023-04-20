@@ -70,7 +70,7 @@ $(document).ready( () => {
         }
         if(price === "" || isNaN(price) || price < 100 || price > 100000){
             console.log("price");
-            $("#price").next().text("* Enter a valid positive number g.t. 100.");
+            $("#price").next().text("* Enter a valid positive number l.t. 100,000.");
             valid = false;
             if(badOne == ""){
                 console.log("SETTING BAD ONE");

@@ -32,13 +32,13 @@
         $error_message = 'Package width must be a valid positive number no more than 36 inches.';
     } else if ($length === FALSE || $length < 0 || $length > 36){
         $error_message = 'Package length must be a valid positive number no more than 36 inches.';
-    } else if ($val === FALSE || $val < 0){
-        $error_message = 'Shipment Value must be a valid positive number.';
+    } else if ($val === FALSE || $val < 0 || $val > 150){
+        $error_message = 'Shipment Value must be a valid positive number less than or equal to 150.';
     } else if (!(is_string($fname) || is_string($lname))){
         $error_message = 'Please enter a valid name.';
     } else if (!is_string($city)){
         $error_message = 'Please enter a valid city.';
-    } else if (!is_string($state)){
+    } else if (!is_string($state) || !in_array($state, $statesarr)){
         $error_message = 'Please enter a valid state.';
     }
     
